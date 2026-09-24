@@ -14,7 +14,7 @@ export const metadata = createMetadata(
 export default function SolutionsPage() {
   return (
     <>
-      <PageHero eyebrow="Solutions" title="Common types of digital systems we can help build." description="Each project is planned around the users, current systems, budget and priorities of the organisation." crumbs={[{ label: "Solutions" }]} />
+      <PageHero eyebrow="Solutions" title="Useful systems. Clear outcomes. Ready to evolve." description="Each solution is shaped around your users, current systems, priorities and the outcomes that matter." crumbs={[{ label: "Solutions" }]} image="/site-assets/headers/solutions.webp" imageAlt="A team reviewing a digital solution" />
       <div className="solution-details">
         {solutions.map((solution, index) => {
           const relatedWork = workItems.filter((item) => item.relatedSolutions.includes(solution.title));

@@ -4,10 +4,10 @@ export function BrandMark({ inverse = false, priority = false }: { inverse?: boo
   return (
     <span className="brand-logo" data-inverse={inverse}>
       <Image
-        src="/charitr-logo.webp"
+        src={inverse ? "/site-assets/charitr-logo-dark.png" : "/site-assets/charitr-logo-dark.png"}
         alt=""
-        width={520}
-        height={120}
+        width={3020}
+        height={606}
         priority={priority}
         unoptimized
         sizes="(max-width: 600px) 180px, 220px"

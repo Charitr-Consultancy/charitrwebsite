@@ -10,7 +10,7 @@ export const contact = {
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/capabilities" },
+  { label: "Services", href: "/services" },
   { label: "Solutions", href: "/solutions" },
   { label: "Work", href: "/work" },
   { label: "Contact", href: "/contact" },

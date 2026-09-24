@@ -1,16 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope } from "next/font/google";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { siteName, siteUrl } from "@/lib/metadata";
 import "./globals.css";
 
-const manrope = Manrope({ variable: "--font-heading", subsets: ["latin"], display: "swap" });
-const inter = Inter({ variable: "--font-body", subsets: ["latin"], display: "swap" });
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: siteName, template: "%s | Charitr" },
-  description: "Charitr provides software development, UI/UX design, AI automation and technology consulting.",
+  description: "Custom software, premium digital design, practical AI systems and technology consulting for ambitious organisations.",
   applicationName: "Charitr",
   icons: {
     icon: "/favicon.png",
@@ -22,7 +18,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#10233F",
+  themeColor: "#050a12",
 };
 
 const structuredData = [
@@ -51,7 +47,7 @@ const structuredData = [
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${inter.variable}`}>
+      <body>
         <SiteShell>{children}</SiteShell>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </body>

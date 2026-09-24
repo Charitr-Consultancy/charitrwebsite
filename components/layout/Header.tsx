@@ -17,6 +17,8 @@ export function Header() {
       ? pathname.replace(/\/+$/, "")
       : pathname;
 
+    if (href === "/services" && normalizedPath.startsWith("/capabilities")) return true;
+
     return href === "/"
       ? normalizedPath === "/"
       : normalizedPath === href || normalizedPath.startsWith(`${href}/`);
@@ -63,7 +65,7 @@ export function Header() {
         </nav>
 
         <Link className="button button--small header-cta" href="/contact">
-          Contact Us
+          Get a Quote
         </Link>
 
         <button
@@ -90,7 +92,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link className="button" href="/contact" onClick={() => setOpen(false)}>Contact Us</Link>
+          <Link className="button" href="/contact" onClick={() => setOpen(false)}>Get a Quote</Link>
         </nav>
       </div>
     </header>
