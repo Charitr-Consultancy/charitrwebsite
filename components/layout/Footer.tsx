@@ -9,8 +9,8 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-intro">
-          <Link href="/" className="brand brand--inverse" aria-label="Charitr home">
-            <BrandMark inverse />
+          <Link href="/" className="brand" aria-label="Charitr home">
+            <BrandMark />
           </Link>
           <p>Software development and digital solutions for organisations in India and internationally.</p>
           <div className="footer-contact">
