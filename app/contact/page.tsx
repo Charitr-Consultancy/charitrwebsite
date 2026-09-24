@@ -13,7 +13,7 @@ export const metadata = createMetadata(
 export default function ContactPage() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Tell us what you’re trying to move forward." description="Share a short outline of the software, website, AI or technology challenge you want to solve." crumbs={[{ label: "Contact" }]} image="/site-assets/headers/contact.webp" imageAlt="A focused conversation about a digital project" />
+      <PageHero eyebrow="Contact" title="Tell us what you’re trying to move forward." highlight="move forward." description="Share a short outline of the software, website, AI or technology challenge you want to solve." crumbs={[{ label: "Contact" }]} image="/site-assets/headers/contact.webp" imageAlt="A focused conversation about a digital project" />
       <section className="section section--white">
         <div className="container contact-layout">
           <aside>

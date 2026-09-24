@@ -16,6 +16,7 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Work"
         title="Digital experiences designed around real users."
+        highlight="real users."
         description="Selected learning and web experiences designed to make information, services and everyday tasks clearer."
         crumbs={[{ label: "Work" }]}
         image="/site-assets/headers/work.webp"

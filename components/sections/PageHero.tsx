@@ -4,6 +4,7 @@ import Image from "next/image";
 export function PageHero({
   eyebrow,
   title,
+  highlight,
   description,
   crumbs,
   placeholder = false,
@@ -12,12 +13,17 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
+  highlight?: string;
   description: string | readonly string[];
   crumbs: Crumb[];
   placeholder?: boolean;
   image?: string;
   imageAlt?: string;
 }) {
+  const highlightedTitle = highlight && title.endsWith(highlight)
+    ? <>{title.slice(0, -highlight.length)}<span className="gradient-text">{highlight}</span></>
+    : title;
+
   return (
     <section className="page-hero">
       {image && (
@@ -29,7 +35,7 @@ export function PageHero({
         <Breadcrumbs items={crumbs} />
         <div className="page-hero__content">
           <p className={placeholder ? "placeholder-hero-label" : "eyebrow"}>{eyebrow}</p>
-          <h1>{title}</h1>
+          <h1>{highlightedTitle}</h1>
           <div className="page-hero__description">
             {typeof description === "string"
               ? <p>{description}</p>

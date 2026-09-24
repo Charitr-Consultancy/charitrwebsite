@@ -13,7 +13,7 @@ export const metadata = createMetadata(
 export default function CapabilitiesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Expertise that moves from strategy to shipped." description="Software engineering, product design, AI automation and technology consulting—combined around the outcome your organisation needs." crumbs={[{ label: "Services" }]} image="/site-assets/headers/services.webp" imageAlt="Digital product specialists working together" />
+      <PageHero eyebrow="Services" title="Expertise that moves from strategy to shipped." highlight="strategy to shipped." description="Software engineering, product design, AI automation and technology consulting—combined around the outcome your organisation needs." crumbs={[{ label: "Services" }]} image="/site-assets/headers/services.webp" imageAlt="Digital product specialists working together" />
       <section className="section">
         <div className="container capability-grid capability-grid--listing">
           {capabilities.map((capability, index) => <CapabilityCard key={capability.slug} capability={capability} index={index} />)}
