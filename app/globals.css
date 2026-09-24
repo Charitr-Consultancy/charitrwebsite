@@ -61,7 +61,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .eyebrow { margin-bottom: 14px; color: var(--teal); font-weight: 750; font-size: .76rem; letter-spacing: .13em; text-transform: uppercase; }
 .section--navy .eyebrow, .cta-section .eyebrow, .name-section .eyebrow { color: #61c7c7; }
 .section-header { max-width: 780px; margin-bottom: 52px; }
-.section-header h2 { text-wrap: balance; }
+.section-header h2 { max-width: 760px; font-size: clamp(2.2rem, 4.5vw, 4.3rem); line-height: 1.02; letter-spacing: -.045em; text-wrap: balance; }
 .section-header > p:last-child { max-width: 660px; margin-top: 18px; color: var(--slate); font-size: 1.08rem; }
 .section-header--center { margin-inline: auto; text-align: center; }
 .section-header--inverse h2 { color: var(--white); }
@@ -672,9 +672,9 @@ p { color: inherit; }
 .why-card b { position: absolute; top: 26px; right: 25px; color: var(--site-blue-2); font-size: .76rem; }
 .why-card h3 { max-width: 250px; margin-top: 55px; font-size: 1.16rem; }
 .locations { gap: 0; overflow: hidden; border: 1px solid var(--site-line); border-radius: 24px; }
-.locations > div { min-height: 210px; padding: 38px; border: 0; border-radius: 0; background: linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.018)); }
-.locations > div + div { border-left: 1px solid var(--site-line); }
-.locations svg { color: var(--site-blue-2); }
+.location { min-height: 210px; padding: 38px; border: 0; border-radius: 0; background: linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.018)); }
+.location + .location { border-left: 1px solid var(--site-line); }
+.location .code { color: var(--site-blue-2); font-size: .72rem; font-weight: 800; letter-spacing: .15em; }
 .locations h3 { margin-top: 42px; font-size: 2rem; }
 .locations p { color: var(--site-muted); }
 
@@ -743,7 +743,7 @@ p { color: inherit; }
   .flow-fragment { display: grid; }
   .flow-arrow { transform: rotate(90deg); padding: 8px; }
   .why-grid { grid-template-columns: 1fr; }
-  .locations > div + div { border-left: 0; border-top: 1px solid var(--site-line); }
+  .location + .location { border-left: 0; border-top: 1px solid var(--site-line); }
   .cta-photo { min-height: 520px; }
   .cta-photo::after { background: linear-gradient(180deg,rgba(5,10,18,.42),rgba(5,10,18,.97) 80%); }
   .page-hero { min-height: 560px; padding: 74px 0 58px; align-items: end; }

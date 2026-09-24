@@ -1,14 +1,16 @@
-import { MapPin } from "lucide-react";
-
 export function LocationBlock() {
   return (
     <div className="locations">
       {[
-        ["Delhi", "Registered office"],
-        ["Chennai", "Delivery presence"],
-        ["Kochi", "Delivery presence"],
-      ].map(([city, label]) => (
-        <div key={city}><MapPin size={20} /><h3>{city}</h3><p>{label}</p></div>
+        ["DEL · NORTH", "Delhi", "Registered office"],
+        ["MAA · SOUTH EAST", "Chennai", "Delivery presence"],
+        ["COK · SOUTH WEST", "Kochi", "Delivery presence"],
+      ].map(([code, city, label]) => (
+        <article className="location" key={city}>
+          <span className="code">{code}</span>
+          <h3>{city}</h3>
+          <p>{label}</p>
+        </article>
       ))}
     </div>
   );

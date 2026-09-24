@@ -7,16 +7,21 @@ async function render(path = "/") {
   return readFile(new URL(`../out/${route}`, import.meta.url), "utf8");
 }
 
+function textContent(html) {
+  return html.replace(/<!--.*?-->/gs, "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+}
+
 test("static export contains the finished Charitr homepage", async () => {
   const html = await render();
+  const text = textContent(html);
   assert.match(html, /Empowering the future through/);
   assert.match(html, /Charitr Consultancy Private Limited/);
   assert.match(html, /Start Your Project/);
   assert.match(html, /Explore Solutions/);
   assert.match(html, /Engineering Excellence/);
   assert.match(html, /AI and Intelligent Automation/);
-  assert.match(html, /One partner for every layer of digital progress/);
-  assert.match(html, /From problem to practical progress/);
+  assert.match(text, /One partner for every layer of digital progress/);
+  assert.match(text, /From problem to practical progress/);
   assert.match(html, /site-assets\/charitr-logo-dark\.png/);
   assert.match(html, /site-assets\/charitr-team-hero\.webp/);
   assert.match(html, /favicon\.png/);
@@ -64,6 +69,7 @@ test("static export contains no website submission endpoint", async () => {
 test("work pages contain factual entries and no project placeholders", async () => {
   const workHtml = await render("/work");
   const homepage = await render();
+  const homepageText = textContent(homepage);
 
   assert.match(workHtml, /Selected Work/);
   assert.match(workHtml, /Mobile Learning Application/);
@@ -72,7 +78,7 @@ test("work pages contain factual entries and no project placeholders", async () 
   assert.match(workHtml, /\+91 99112 20198/);
   assert.match(workHtml, /info@charitr\.in/);
   assert.doesNotMatch(workHtml, /placeholder|to be confirmed/i);
-  assert.match(homepage, /Digital solutions built around real user needs/);
+  assert.match(homepageText, /Digital solutions built around real user needs/);
   assert.match(homepage, /Mobile Learning Application/);
   assert.match(homepage, /Website Design and Development/);
   assert.doesNotMatch(homepage, /Digital Presence and Website Improvement|placeholder/i);

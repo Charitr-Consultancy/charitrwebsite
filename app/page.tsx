@@ -55,7 +55,7 @@ export default function Home() {
 
       <section className="section" id="services">
         <div className="container">
-          <SectionHeader eyebrow="Core capabilities" title="One partner for every layer of digital progress." description="Engineering, design, AI and transformation expertise brought together around measurable business outcomes." />
+          <SectionHeader eyebrow="Core capabilities" title="One partner for every layer of digital progress." highlight="digital progress." description="Engineering, design, AI and transformation expertise brought together around measurable business outcomes." />
           <div className="capability-grid">
             {capabilities.map((capability, index) => <CapabilityCard key={capability.slug} capability={capability} index={index} />)}
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
       <section className="section section--blue-grey">
         <div className="container process-layout">
           <div className="process-sticky">
-            <SectionHeader eyebrow="How Charitr works" title="From problem to practical progress." description="A connected process from understanding your context through implementation, adoption and continuous improvement." />
+            <SectionHeader eyebrow="How Charitr works" title="From problem to practical progress." highlight="practical progress." description="A connected process from understanding your context through implementation, adoption and continuous improvement." />
             <div className="process-image">
               <Image src="/site-assets/charitr-team-process.webp" alt="Technology team reviewing a product workflow together" fill unoptimized sizes="(max-width: 900px) 100vw, 42vw" />
             </div>
@@ -76,14 +76,14 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <SectionHeader eyebrow="Solutions lab" title="What Charitr helps create." description="Explore how focused technology layers turn a complex operational need into a practical, adoptable system." />
+          <SectionHeader eyebrow="Solutions lab" title="What Charitr helps create." highlight="create." description="Explore how focused technology layers turn a complex operational need into a practical, adoptable system." />
           <SolutionLab />
         </div>
       </section>
 
       <section className="section section--blue-grey">
         <div className="container section-heading-row">
-          <SectionHeader eyebrow="Selected work" title="Digital solutions built around real user needs." />
+          <SectionHeader eyebrow="Selected work" title="Digital solutions built around real user needs." highlight="real user needs." />
           <Link className="button button--secondary" href="/work">View all work <ArrowRight size={17} /></Link>
         </div>
         <div className="container"><WorkShowcase /></div>
@@ -91,7 +91,7 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <SectionHeader eyebrow="Why Charitr" title="Technology work grounded in practical needs." description="We connect strategy, design and engineering so decisions become useful, maintainable solutions." />
+          <SectionHeader eyebrow="Why Charitr" title="Technology work grounded in practical needs." highlight="practical needs." description="We connect strategy, design and engineering so decisions become useful, maintainable solutions." />
           <div className="why-grid">
             {whyCharitr.map((item, index) => {
               const Icon = whyIcons[index] ?? Sparkles;
@@ -103,7 +103,7 @@ export default function Home() {
 
       <section className="section section--blue-grey">
         <div className="container">
-          <SectionHeader eyebrow="Where we work" title="Delhi · Chennai · Kochi" description="Charitr has its registered office in Delhi and a working presence in Chennai and Kochi." />
+          <SectionHeader eyebrow="Our locations" title="Delhi · Chennai · Kochi" description="Local perspective, connected delivery, and support for organisations in India and internationally." />
           <LocationBlock />
         </div>
       </section>
