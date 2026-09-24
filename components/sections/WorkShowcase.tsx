@@ -15,7 +15,9 @@ export function WorkShowcase() {
     <div className="work-stage">
       {featured.map((item, index) => (
         <article className={`showcase-card${active === index ? " active" : ""}`} key={item.slug} aria-hidden={active !== index}>
-          <div className="showcase-visual"><Image src={images[index]} alt="" fill unoptimized sizes="(max-width: 900px) 100vw, 50vw" /></div>
+          <div className="showcase-visual">
+            {active === index && <Image src={images[index]} alt="" fill unoptimized sizes="(max-width: 900px) calc(100vw - 32px), 50vw" />}
+          </div>
           <div className="showcase-copy">
             <span className="index">0{index + 1} · {item.tags[2]}</span>
             <h3>{item.title}</h3>
