@@ -15,13 +15,11 @@ export default function WorkPage() {
     <>
       <PageHero
         eyebrow="Work"
-        title="Selected Work"
-        description={[
-          "We are building Charitr around practical technology delivery — designing and developing digital solutions that are clear, useful and maintainable.",
-          "Our work so far includes digital learning applications and websites developed for organisations with specific communication, learning and user-experience needs.",
-          "As Charitr grows, this section will include more detailed project stories and outcomes.",
-        ]}
+        title="Digital experiences designed around real users."
+        description="Selected learning and web experiences designed to make information, services and everyday tasks clearer."
         crumbs={[{ label: "Work" }]}
+        image="/site-assets/headers/work.webp"
+        imageAlt="Digital product work presented across devices"
       />
       <section className="section section--white">
         <div className="container work-list">
@@ -29,9 +27,9 @@ export default function WorkPage() {
         </div>
       </section>
       <CTASection
-        title="Our work is growing"
-        text="Charitr is an evolving technology company, and our portfolio will continue to grow across software engineering, experience design, artificial intelligence and digital transformation. We prefer to show real work rather than publish speculative case studies or unsupported results."
-        button="Discuss Your Requirement"
+        title="What could the right product unlock for you?"
+        text="Tell us what your users need to do and where the current experience gets in their way."
+        button="Start Your Project"
       />
     </>
   );

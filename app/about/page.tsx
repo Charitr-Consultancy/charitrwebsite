@@ -21,10 +21,10 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About Charitr" title="A software and digital solutions company." description="Charitr Consultancy Private Limited helps organisations plan, design, build and improve websites, applications and business systems." crumbs={[{ label: "About" }]} />
+      <PageHero eyebrow="About Charitr" title="Clarity first. Technology with purpose." description="A connected team helping organisations turn complex digital work into clear, useful and maintainable solutions." crumbs={[{ label: "About" }]} image="/site-assets/headers/about.webp" imageAlt="Charitr team collaborating on a digital initiative" />
       <section className="section section--white">
         <div className="container editorial-split">
-          <div><p className="eyebrow">Who we are</p><h2>Technology support for organisations of different sizes.</h2></div>
+          <div><p className="eyebrow">Who we are</p><h2>A connected team for complex digital work.</h2></div>
           <div className="prose-large">
             <p>Charitr works with SMEs, social enterprises, NGOs and education organisations in India and internationally.</p>
             <p>Our work includes software development, UI/UX design, AI automation and technology consulting. We can support a complete project or help with a specific part of it.</p>
@@ -49,12 +49,6 @@ export default function AboutPage() {
           <div className="principle-grid">
             {principles.map(([title, text, Icon]) => <article key={String(title)}><Icon /><h3>{String(title)}</h3><p>{String(text)}</p></article>)}
           </div>
-        </div>
-      </section>
-      <section className="section section--blue-grey">
-        <div className="container leadership-layout">
-          <div><SectionHeader eyebrow="Leadership" title="Leadership details will be added here" description="Names, roles, biographies and photographs will be added after they are approved." /></div>
-          <div className="leadership-placeholder"><span>PLACEHOLDER · Leadership profiles</span><div /><div /></div>
         </div>
       </section>
       <section className="section section--white">

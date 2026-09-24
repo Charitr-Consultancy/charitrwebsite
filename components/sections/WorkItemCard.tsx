@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import Image from "next/image";
 import type { WorkItem } from "@/types/site";
 
 export function WorkItemCard({
@@ -10,9 +11,12 @@ export function WorkItemCard({
   index: number;
   compact?: boolean;
 }) {
+  const image = index === 0 ? "/site-assets/mobile-learning-app.webp" : "/site-assets/website-design.webp";
+
   if (compact) {
     return (
       <article className="work-card">
+        <div className="work-card__media"><Image src={image} alt="" fill unoptimized sizes="(max-width: 800px) 100vw, 50vw" /></div>
         <span className="work-card__number">0{index + 1}</span>
         <p className="eyebrow">{item.subtitle}</p>
         <h3>{item.title}</h3>
@@ -26,6 +30,7 @@ export function WorkItemCard({
 
   return (
     <article className="work-item" id={item.slug}>
+      {index < 2 && <div className="work-item__media"><Image src={image} alt="" fill unoptimized sizes="100vw" /></div>}
       <header className="work-item__header">
         <span className="work-item__number">0{index + 1}</span>
         <div>

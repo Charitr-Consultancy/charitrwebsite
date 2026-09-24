@@ -9,15 +9,16 @@ async function render(path = "/") {
 
 test("static export contains the finished Charitr homepage", async () => {
   const html = await render();
-  assert.match(html, /We design and build digital solutions/);
+  assert.match(html, /Empowering the future through/);
   assert.match(html, /Charitr Consultancy Private Limited/);
-  assert.match(html, /Discuss Your Requirement/);
-  assert.match(html, /Explore Our Capabilities/);
+  assert.match(html, /Start Your Project/);
+  assert.match(html, /Explore Solutions/);
   assert.match(html, /Engineering Excellence/);
   assert.match(html, /AI and Intelligent Automation/);
-  assert.match(html, /What this means for your organisation/);
+  assert.match(html, /One partner for every layer of digital progress/);
   assert.match(html, /From problem to practical progress/);
-  assert.match(html, /charitr-logo\.webp/);
+  assert.match(html, /site-assets\/charitr-logo-dark\.png/);
+  assert.match(html, /site-assets\/charitr-team-hero\.webp/);
   assert.match(html, /favicon\.png/);
   assert.match(html, /https:\/\/charitr\.in/);
   assert.doesNotMatch(html, /\/charitrwebsite\//);
@@ -30,6 +31,13 @@ test("static export contains an internal route with breadcrumbs", async () => {
   assert.match(html, /Build reliable digital products/);
   assert.match(html, /aria-label="Breadcrumb"/);
   assert.match(html, /Common problems/);
+});
+
+test("services has a public route and preserves detailed capability pages", async () => {
+  const servicesHtml = await render("/services");
+  assert.match(servicesHtml, /Expertise that moves from/);
+  assert.match(servicesHtml, /Engineering Excellence/);
+  assert.match(servicesHtml, /\/capabilities\/engineering-excellence\//);
 });
 
 test("navigation supports an accessible active-page state", async () => {
@@ -94,6 +102,6 @@ test("GitHub Pages publishes the custom domain from the root", async () => {
 
   assert.equal(cname.trim(), "charitr.in");
   assert.match(homepage, /href="\/about\/"/);
-  assert.match(homepage, /src="\/charitr-logo\.webp"/);
+  assert.match(homepage, /src="\/site-assets\/charitr-logo-dark\.png"/);
   assert.doesNotMatch(homepage, /NEXT_PUBLIC_BASE_PATH|\/charitrwebsite\//);
 });

@@ -13,12 +13,12 @@ export const metadata = createMetadata(
 export default function ContactPage() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Tell us what you need help with." description="Email or call us with a short outline of your software, website or technology requirement." crumbs={[{ label: "Contact" }]} />
+      <PageHero eyebrow="Contact" title="Tell us what you’re trying to move forward." description="Share a short outline of the software, website, AI or technology challenge you want to solve." crumbs={[{ label: "Contact" }]} image="/site-assets/headers/contact.webp" imageAlt="A focused conversation about a digital project" />
       <section className="section section--white">
         <div className="container contact-layout">
           <aside>
             <p className="eyebrow">Contact Charitr</p>
-            <h2>Contact our team</h2>
+            <h2>Let’s make the complex clearer.</h2>
             <p>We work with organisations in India and other countries from Delhi, Chennai and Kochi.</p>
             <div className="contact-lines contact-lines--large">
               <a href={contact.phoneHref}><Phone /><span><small>Phone</small>{contact.phone}</span></a>
