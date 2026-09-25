@@ -7,7 +7,6 @@ export function PageHero({
   highlight,
   description,
   crumbs,
-  placeholder = false,
   image,
   imageAlt = "",
 }: {
@@ -16,7 +15,6 @@ export function PageHero({
   highlight?: string;
   description: string | readonly string[];
   crumbs: Crumb[];
-  placeholder?: boolean;
   image?: string;
   imageAlt?: string;
 }) {
@@ -34,7 +32,7 @@ export function PageHero({
       <div className="container">
         <Breadcrumbs items={crumbs} />
         <div className="page-hero__content">
-          <p className={placeholder ? "placeholder-hero-label" : "eyebrow"}>{eyebrow}</p>
+          <p className="eyebrow">{eyebrow}</p>
           <h1>{highlightedTitle}</h1>
           <div className="page-hero__description">
             {typeof description === "string"

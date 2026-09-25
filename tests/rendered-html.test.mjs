@@ -85,15 +85,11 @@ test("work pages contain factual entries and no project placeholders", async () 
   await assert.rejects(() => render("/work/platform-modernisation-placeholder"), { code: "ENOENT" });
 });
 
-test("non-project placeholders remain explicit and styled in red", async () => {
-  const legalHtml = await render("/privacy-policy");
-  const styles = await readFile(
-    new URL("../app/globals.css", import.meta.url),
-    "utf8",
-  );
-
-  assert.match(legalHtml, /PLACEHOLDER · Legal/);
-  assert.match(styles, /--placeholder-red: #b42318/);
+test("approved legal pages publish without placeholder warnings", async () => {
+  for (const route of ["/privacy-policy", "/cookie-policy", "/terms-of-use"]) {
+    const legalHtml = await render(route);
+    assert.doesNotMatch(legalHtml, /PLACEHOLDER · Legal|requires review by qualified legal counsel before public use/);
+  }
 });
 
 test("careers is not published", async () => {
