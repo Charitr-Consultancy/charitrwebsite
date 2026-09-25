@@ -808,6 +808,9 @@ p { color: inherit; }
   .page-hero { min-height: 560px; padding: 74px 0 58px; align-items: end; }
   .page-hero-media { left: 0; opacity: .76; }
   .page-hero::before { background: linear-gradient(180deg,rgba(5,10,18,.2),rgba(5,10,18,.7) 48%,var(--site-bg) 88%); }
+  .process-layout { grid-template-columns: 1fr; gap: 44px; }
+  .process-layout > * { min-width: 0; }
+  .process-sticky { position: static; }
   .services-panel { padding: 26px; border-radius: 22px; }
   .services-panel ul, .capability-flow { grid-template-columns: 1fr; }
   .services-panel li { min-height: 0; }
