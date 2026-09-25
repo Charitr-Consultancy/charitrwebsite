@@ -3,10 +3,19 @@ export type Capability = {
   title: string;
   eyebrow: string;
   statement: string;
+  highlight: string;
   cardDescription: string;
   overview: string;
+  image: string;
+  imageAlt: string;
   problems: string[];
   services: string[];
+  infographic: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    steps: { title: string; description: string }[];
+  };
   customers: string[];
   example: string;
   approach: string[];

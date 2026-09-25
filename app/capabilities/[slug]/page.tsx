@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check, Users } from "lucide-react";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/sections/CTASection";
+import { CapabilityInfographic } from "@/components/sections/CapabilityInfographic";
 import { PageHero } from "@/components/sections/PageHero";
 import { capabilities, solutions, workItems } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
@@ -26,13 +27,19 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
 
   return (
     <>
-      <PageHero eyebrow={capability.eyebrow} title={capability.statement} description={capability.overview} crumbs={[{ label: "Services", href: "/capabilities" }, { label: capability.title }]} />
+      <PageHero eyebrow={capability.eyebrow} title={capability.statement} highlight={capability.highlight} description={capability.overview} crumbs={[{ label: "Services", href: "/capabilities" }, { label: capability.title }]} image={capability.image} imageAlt={capability.imageAlt} />
       <section className="section section--white">
         <div className="container capability-detail-grid">
-          <div><p className="eyebrow">What we can help with</p><h2>Common problems</h2><ul className="check-list">{capability.problems.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul></div>
-          <div className="services-panel"><p className="eyebrow">Services</p><h2>What we provide</h2><ul>{capability.services.map((item) => <li key={item}>{item}</li>)}</ul></div>
+          <div className="problem-panel"><p className="eyebrow">What we can help with</p><h2>Common problems</h2><ul className="check-list">{capability.problems.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul></div>
+          <div className="services-panel">
+            <p className="eyebrow">Services</p>
+            <h2>What we provide</h2>
+            <p className="services-panel__intro">Choose a focused service or combine several around the outcome you need.</p>
+            <ul>{capability.services.map((item, index) => <li key={item}><span>0{index + 1}</span><p>{item}</p></li>)}</ul>
+          </div>
         </div>
       </section>
+      <CapabilityInfographic capability={capability} />
       <section className="section">
         <div className="container customer-example-grid">
           <div><Users size={28} /><p className="eyebrow">Who this is for</p><h2>Organisations that need practical technology support.</h2><ul>{capability.customers.map((item) => <li key={item}>{item}</li>)}</ul></div>

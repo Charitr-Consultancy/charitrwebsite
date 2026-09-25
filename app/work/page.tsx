@@ -29,7 +29,6 @@ export default function WorkPage() {
       </section>
       <CTASection
         title="What could the right product unlock for you?"
-        text="Tell us what your users need to do and where the current experience gets in their way."
         button="Start Your Project"
       />
     </>

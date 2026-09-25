@@ -22,9 +22,12 @@ export const capabilities: Capability[] = [
     title: "Engineering Excellence",
     eyebrow: "Reliable software delivery",
     statement: "Build reliable digital products that can scale.",
+    highlight: "that can scale.",
     cardDescription: "Design, develop and improve applications, platforms and integrations with quality and maintainability in mind.",
     overview:
       "Charitr develops web applications, digital platforms and business systems. We can build a new product, improve an existing application or connect systems that currently work separately.",
+    image: "/site-assets/headers/engineering-excellence.webp",
+    imageAlt: "Software engineers reviewing an application architecture together",
     problems: [
       "Outdated or difficult-to-maintain applications",
       "Slow or unreliable digital platforms",
@@ -47,6 +50,16 @@ export const capabilities: Capability[] = [
       "Security-focused engineering",
       "Ongoing product enhancement",
     ],
+    infographic: {
+      eyebrow: "Engineering lifecycle",
+      title: "From a sound foundation to dependable delivery.",
+      description: "We connect architecture, product engineering and operational discipline so software remains useful as your organisation grows.",
+      steps: [
+        { title: "Architect", description: "Clarify the system, integration and data foundations." },
+        { title: "Build", description: "Create maintainable features in manageable releases." },
+        { title: "Operate", description: "Automate quality, deployment and performance monitoring." },
+      ],
+    },
     customers: [
       "SMEs and start-ups building digital products",
       "NGOs and social enterprises developing programme or service platforms",
@@ -65,9 +78,12 @@ export const capabilities: Capability[] = [
     title: "UI/UX and Product Design",
     eyebrow: "Clear digital experiences",
     statement: "Create digital experiences people can understand and use.",
+    highlight: "understand and use.",
     cardDescription: "Research user needs, simplify journeys and create accessible interfaces that support real tasks.",
     overview:
       "Charitr helps plan and design websites, applications and digital services. We study what users need, organise the content and workflows, and create clear designs for development.",
+    image: "/site-assets/headers/ui-ux-product-design.webp",
+    imageAlt: "Product designers reviewing a mobile interface prototype",
     problems: [
       "Confusing digital experiences and poor navigation",
       "Low user adoption",
@@ -89,6 +105,16 @@ export const capabilities: Capability[] = [
       "Usability testing and UX audits",
       "Developer-ready design specifications",
     ],
+    infographic: {
+      eyebrow: "Design pathway",
+      title: "Turn real user needs into clear digital experiences.",
+      description: "Research, interaction design and validation work together to reduce uncertainty before and during development.",
+      steps: [
+        { title: "Discover", description: "Understand users, contexts and the tasks that matter." },
+        { title: "Design", description: "Shape journeys, interfaces and reusable components." },
+        { title: "Validate", description: "Test important flows and refine them with evidence." },
+      ],
+    },
     customers: [
       "Organisations developing or redesigning digital products",
       "Start-ups validating product ideas",
@@ -107,9 +133,12 @@ export const capabilities: Capability[] = [
     title: "AI and Intelligent Automation",
     eyebrow: "Responsible applied AI",
     statement: "Apply AI to practical product and operational challenges.",
+    highlight: "operational challenges.",
     cardDescription: "Assess useful opportunities and design AI-assisted tools with appropriate data, risk and human-review controls.",
     overview:
       "Charitr helps organisations find suitable uses for AI and automation. We can build tools for document processing, search, reporting and routine workflows, with human review where it is needed.",
+    image: "/site-assets/headers/ai-intelligent-automation.webp",
+    imageAlt: "Technology specialists reviewing an AI-assisted document workflow",
     problems: [
       "Repetitive administrative work",
       "Manual document processing and report preparation",
@@ -133,6 +162,16 @@ export const capabilities: Capability[] = [
       "Human-review workflows and responsible AI controls",
       "AI governance guidance",
     ],
+    infographic: {
+      eyebrow: "Responsible AI flow",
+      title: "Useful automation with people and controls built in.",
+      description: "We focus AI on a defined task, connect it to suitable information and keep human judgement where it adds value.",
+      steps: [
+        { title: "Identify", description: "Choose a valuable task and define a clear success measure." },
+        { title: "Assist", description: "Apply AI to search, extract, draft or recommend." },
+        { title: "Govern", description: "Add review, traceability and continuous monitoring." },
+      ],
+    },
     customers: [
       "SMEs improving operational efficiency",
       "Product companies adding AI capabilities",
@@ -152,9 +191,12 @@ export const capabilities: Capability[] = [
     title: "Technology Transformation and Advisory",
     eyebrow: "Decisions through delivery",
     statement: "Make better technology decisions and carry them through implementation.",
+    highlight: "through implementation.",
     cardDescription: "Review systems and processes, set priorities, compare options and support implementation and adoption.",
     overview:
       "Charitr reviews existing systems and processes, helps set priorities, and supports software or vendor selection. We can also help manage implementation, testing and user adoption.",
+    image: "/site-assets/headers/technology-transformation-advisory.webp",
+    imageAlt: "Consultants and business leaders reviewing a technology transformation roadmap",
     problems: [
       "Fragmented systems and duplicate platforms",
       "Dependency on spreadsheets and email",
@@ -180,6 +222,16 @@ export const capabilities: Capability[] = [
       "Deployment and adoption support",
       "Post-implementation reviews",
     ],
+    infographic: {
+      eyebrow: "Transformation roadmap",
+      title: "Move from technology choices to adopted change.",
+      description: "Independent advice stays connected to implementation, helping teams make decisions they can carry through in practice.",
+      steps: [
+        { title: "Assess", description: "Understand systems, processes, risks and constraints." },
+        { title: "Prioritise", description: "Compare options and sequence the highest-value changes." },
+        { title: "Deliver", description: "Guide implementation, testing and organisational adoption." },
+      ],
+    },
     customers: [
       "SMEs modernising operations",
       "NGOs managing multiple programmes",
